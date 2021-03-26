@@ -10,6 +10,7 @@ import UIKit
 class DetailViewController: UIViewController, UITextViewDelegate {
     @IBOutlet var noteText: UITextView!
     
+//     Codes for building the UI Programmatically
 //    @IBOutlet var titleField: UITextField!
 //
 //    override func loadView() {
@@ -67,17 +68,7 @@ class DetailViewController: UIViewController, UITextViewDelegate {
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
         notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-        
-//        let html = """
-//        <p><strong><span style="font-size: 40px;">\(notes[selectedIndex].title)</span></strong></p>
-//       """
-//
-//        let data = Data(html.utf8)
-//        if let attributedString = try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) {
-//            noteText.attributedText = attributedString
-
-//        }
-        
+      
     
     }
     
